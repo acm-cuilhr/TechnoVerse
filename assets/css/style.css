@@ -549,95 +549,6 @@ h6 {
 	}
 }
 
-#hero .play-btn {
-	width: 94px;
-	height: 94px;
-	background: radial-gradient(
-		var(--primary) 50%,
-		rgba(101, 111, 150, 0.15) 52%
-	);
-	border-radius: 50%;
-	display: block;
-	position: relative;
-	overflow: hidden;
-}
-
-#hero .play-btn::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-40%) translateY(-50%);
-	width: 0;
-	height: 0;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-	border-left: 15px solid #fff;
-	z-index: 100;
-	transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-#hero .play-btn:before {
-	content: "";
-	position: absolute;
-	width: 120px;
-	height: 120px;
-	animation-delay: 0s;
-	animation: pulsate-btn 2s;
-	animation-direction: forwards;
-	animation-iteration-count: infinite;
-	animation-timing-function: steps;
-	opacity: 1;
-	border-radius: 50%;
-	border: 2px solid rgba(163, 163, 163, 0.4);
-	top: -15%;
-	left: -15%;
-	background: rgba(198, 16, 0, 0);
-}
-
-#hero .play-btn:hover::after {
-	border-left: 15px solid var(--primary);
-	transform: scale(20);
-}
-
-#hero .play-btn:hover::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-40%) translateY(-50%);
-	width: 0;
-	height: 0;
-	border: none;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-	border-left: 15px solid #fff;
-	z-index: 200;
-	animation: none;
-	border-radius: 0;
-}
-
-#hero .about-btn {
-	font-family: "Raleway", sans-serif;
-	font-weight: 500;
-	font-size: 14px;
-	letter-spacing: 1px;
-	display: inline-block;
-	padding: 12px 32px;
-	border-radius: 50px;
-	transition: 0.5s;
-	line-height: 1;
-	margin: 10px;
-	color: #fff;
-	animation-delay: 0.8s;
-	border: 2px solid var(--primary);
-}
-
-#hero .about-btn:hover {
-	background: var(--primary);
-	color: #fff;
-}
-
 @keyframes pulsate-btn {
 	0% {
 		transform: scale(0.6, 0.6);
@@ -648,6 +559,31 @@ h6 {
 		transform: scale(1, 1);
 		opacity: 0;
 	}
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+#about {
+	padding: 60px 0;
+}
+
+#about .about-content {
+	background-color: var(--secondary);
+	padding: 30px 0;
+	color: var(--quaternary);
+	font-size: 1.7rem;
+	font-weight: bold;
+	text-wrap: wrap;
+	border-radius: 10px;
+}
+
+#about .about-content h3 {
+	color: var(--primary);
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin-top: 5px;
+	margin-bottom: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -718,6 +654,33 @@ h6 {
 	color: var(--primary) !important;
 	font-style: italic;
 	font-weight: normal !important;
+}
+
+@media (max-width: 576px) {
+	.tick-flip,
+	.tick-text-inline {
+		font-size: 1.7em;
+	}
+
+	.tick-label {
+		font-size: 0.7em;
+	}
+
+	.tick-char {
+		width: 1em;
+	}
+
+	.tick-text-inline + .tick-text-inline {
+		margin-left: -0.1em;
+	}
+
+	.tick-group {
+		margin: 0 0.2em;
+	}
+
+	.tick-onended-message p {
+		font-size: 1em;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1060,19 +1023,23 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Sponsors Section
+# Organizers & Sponsors Section
 --------------------------------------------------------------*/
+#organizers .supporter-logo {
+	padding: 60px;
+}
+
 #supporters {
 	padding: 60px 0;
 }
 
-#supporters .supporters-wrap {
+.supporters-wrap {
 	border-top: 1px solid #e0e5fa;
 	border-left: 1px solid #e0e5fa;
 	margin-bottom: 30px;
 }
 
-#supporters .supporter-logo {
+.supporter-logo {
 	padding: 30px;
 	display: flex;
 	justify-content: center;
@@ -1084,11 +1051,11 @@ h6 {
 	height: 160px;
 }
 
-#supporters .supporter-logo:hover img {
+.supporter-logo:hover img {
 	transform: scale(1.2);
 }
 
-#supporters img {
+.supporter-logo img {
 	transition: all 0.4s ease-in-out;
 }
 
@@ -1116,7 +1083,7 @@ h6 {
 	font-family: var(--primary);
 	font-size: 18px;
 	line-height: 24px;
-	font-weight: 400;
+	font-weight: 600;
 	padding-left: 25px;
 	cursor: pointer;
 	color: var(--secondary);
