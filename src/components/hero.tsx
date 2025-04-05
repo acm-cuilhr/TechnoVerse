@@ -55,7 +55,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="w-full h-screen bg-[url('/images/hero-bg.jpg')] bg-center bg-cover overflow-hidden relative"
+      className="w-full h-screen bg-[url('/assets/images/hero-bg.jpg')] bg-center bg-cover overflow-hidden relative"
     >
       <div className="absolute inset-0 bg-navy/70"></div>
 

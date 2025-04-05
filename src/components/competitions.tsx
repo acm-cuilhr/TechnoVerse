@@ -10,47 +10,47 @@ const competitions: Competition[] = [
   {
     name: 'Coding Spree',
     description: 'Get ready for the coding competition',
-    image: '/images/competitions/coding-spree.jpg',
+    image: '/assets/images/competitions/coding-spree.jpg',
   },
   {
     name: 'Web-e-Thon',
     description: 'Design your own website',
-    image: '/images/competitions/web-e-thon.jpg',
+    image: '/assets/images/competitions/web-e-thon.jpg',
   },
   {
     name: 'Game-e-Thon',
     description: 'Built your own game',
-    image: '/images/competitions/game-e-thon.jpg',
+    image: '/assets/images/competitions/game-e-thon.jpg',
   },
   {
     name: 'Techno Hunt',
     description: 'Get ready for the hunt',
-    image: '/images/competitions/techno-hunt.jpg',
+    image: '/assets/images/competitions/techno-hunt.jpg',
   },
   {
     name: 'Tekken',
     description: 'Get ready for the fight',
-    image: '/images/competitions/tekken.jpg',
+    image: '/assets/images/competitions/tekken.jpg',
   },
   {
     name: 'Fifa',
     description: 'Show your gaming skills in the Fifa competition',
-    image: '/images/competitions/fifa.jpg',
+    image: '/assets/images/competitions/fifa.jpg',
   },
   {
     name: 'Notion Template Design',
     description: 'Design your own notion template',
-    image: '/images/competitions/notion.png',
+    image: '/assets/images/competitions/notion.png',
   },
   {
     name: 'Poster Design',
     description: 'Design your own poster',
-    image: '/images/competitions/poster.png',
+    image: '/assets/images/competitions/poster.png',
   },
   {
     name: 'Best Reel Competition',
     description: 'Design your own reel',
-    image: '/images/competitions/reel.jpg',
+    image: '/assets/images/competitions/reel.jpg',
   },
 ];
 

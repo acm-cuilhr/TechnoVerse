@@ -12,19 +12,19 @@ const speakers: Speaker[] = [
   {
     name: 'Usman ur Rehman',
     role: 'Vice President Systems Limited',
-    image: '/images/speakers/usman-ur-rehman.png',
+    image: '/assets/images/speakers/usman-ur-rehman.png',
     linkedin: 'https://www.linkedin.com/in/usmanurrehmanahmed/',
   },
   {
     name: 'Amnan Hussain',
     role: 'Digital Growth Manager, Devsinc',
-    image: '/images/speakers/amnan-hussain.png',
+    image: '/assets/images/speakers/amnan-hussain.png',
     linkedin: 'https://www.linkedin.com/in/amnan-hussain/?originalSubdomain=pk',
   },
   {
     name: 'Ahmad Manzoor',
     role: 'Founder Pakistan Blockchain Institute',
-    image: '/images/speakers/ahmad-manzoor.png',
+    image: '/assets/images/speakers/ahmad-manzoor.png',
     linkedin:
       'https://www.linkedin.com/in/ahmadmanzoorahmad/?originalSubdomain=pk',
   },

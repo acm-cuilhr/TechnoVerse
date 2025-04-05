@@ -14,7 +14,7 @@ export default function Sponsors() {
         <div className="bg-white rounded-lg p-8 mb-12">
           <div className="flex justify-center">
             <Image
-              src="/images/sponsors/forestudio.png"
+              src="/assets/images/sponsors/forestudio.png"
               alt="Forestudio"
               width={300}
               height={150}
@@ -30,7 +30,7 @@ export default function Sponsors() {
           <div className="bg-white rounded-lg p-8">
             <div className="flex justify-center">
               <Image
-                src="/images/sponsors/notion.png"
+                src="/assets/images/sponsors/notion.png"
                 alt="Notion"
                 width={300}
                 height={150}
@@ -42,7 +42,7 @@ export default function Sponsors() {
           <div className="bg-white rounded-lg p-8">
             <div className="flex justify-center">
               <Image
-                src="/images/sponsors/w3pak.png"
+                src="/assets/images/sponsors/w3pak.png"
                 alt="W3PAK"
                 width={300}
                 height={150}

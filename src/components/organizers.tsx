@@ -16,7 +16,7 @@ export default function Organizers() {
           <div className="col-span-1">
             <div className="supporter-logo">
               <Image
-                src="/images/organizers/gdsc-logo.png"
+                src="/assets/images/organizers/gdsc-logo.png"
                 alt="GDSC"
                 width={300}
                 height={150}
@@ -28,7 +28,7 @@ export default function Organizers() {
           <div className="col-span-1">
             <div className="supporter-logo">
               <Image
-                src="/images/organizers/acm-logo.png"
+                src="/assets/images/organizers/acm-logo.png"
                 alt="ACM"
                 width={300}
                 height={150}
@@ -40,7 +40,7 @@ export default function Organizers() {
           <div className="col-span-1">
             <div className="supporter-logo">
               <Image
-                src="/images/organizers/ieee-logo.png"
+                src="/assets/images/organizers/ieee-logo.png"
                 alt="IEEE"
                 width={300}
                 height={150}

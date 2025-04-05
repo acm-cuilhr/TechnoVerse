@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const galleryImages = [
-  '/images/gallery/1.png',
-  '/images/gallery/2.png',
-  '/images/gallery/3.png',
-  '/images/gallery/4.png',
-  '/images/gallery/5.png',
-  '/images/gallery/6.png',
-  '/images/gallery/7.png',
+  '/assets/images/gallery/1.png',
+  '/assets/images/gallery/2.png',
+  '/assets/images/gallery/3.png',
+  '/assets/images/gallery/4.png',
+  '/assets/images/gallery/5.png',
+  '/assets/images/gallery/6.png',
+  '/assets/images/gallery/7.png',
 ];
 
 export default function Gallery() {

@@ -11,25 +11,25 @@ const leads: Lead[] = [
   {
     name: 'Mohsin Mehdi',
     role: 'Faculty Advisor',
-    image: '/images/leads/mohsin-mehdi.png',
+    image: '/assets/images/leads/mohsin-mehdi.png',
     linkedin: '#',
   },
   {
     name: 'Amna Hussain',
     role: 'Lead TechnoVerse',
-    image: '/images/leads/Amna.png',
+    image: '/assets/images/leads/Amna.png',
     linkedin: 'https://www.linkedin.com/in/amna-hussain-549426251/',
   },
   {
     name: 'Khansa Rahim',
     role: 'Co-Lead TechnoVerse',
-    image: '/images/leads/khansa-rahim.png',
+    image: '/assets/images/leads/khansa-rahim.png',
     linkedin: 'https://www.linkedin.com/in/khansarahim/',
   },
   {
     name: 'Amina Iftikhar',
     role: 'Treasurer',
-    image: '/images/leads/amna-ifthikhar.png',
+    image: '/assets/images/leads/amna-ifthikhar.png',
     linkedin: 'https://www.linkedin.com/in/amina-iftikhar-717612281/',
   },
 ];

@@ -21,7 +21,7 @@ export default function Venue() {
             ></iframe>
           </div>
 
-          <div className="venue-info bg-[url('/images/venue/2.jpg')] bg-cover bg-center relative">
+          <div className="venue-info bg-[url('/assets/images/venue/2.jpg')] bg-cover bg-center relative">
             <div className="absolute inset-0 bg-[rgba(13,20,41,0.8)]"></div>
             <div className="flex justify-center items-center h-full">
               <div className="relative z-10 px-8 py-16 text-center">

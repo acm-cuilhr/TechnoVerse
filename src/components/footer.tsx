@@ -18,7 +18,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <Image
-                src="/images/logo.png"
+                src="/assets/images/logo.png"
                 alt="TechnoVerse"
                 width={40}
                 height={40}
