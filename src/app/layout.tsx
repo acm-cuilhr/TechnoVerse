@@ -1,7 +1,8 @@
 import type React from 'react';
 import { Inter, Raleway } from 'next/font/google';
 
-import { Toaster } from '@/components/ui/sonner';
+import Header from '@/components/header';
+import Footer from '@/components/home/footer';
 
 import './globals.css';
 
@@ -31,11 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${raleway.variable} font-sans bg-navy`}
-      >
+      <body className={`${inter.variable} ${raleway.variable} font-sans`}>
+        <Header />
         {children}
-        <Toaster />
+        <Footer />
       </body>
     </html>
   );

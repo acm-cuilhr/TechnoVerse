@@ -1,29 +1,35 @@
-import About from '@/components/about';
-import Competitions from '@/components/competitions';
-import Contact from '@/components/contact';
+import { previousSponsorsData } from '@/data/previous-sponsors';
+
 import FAQ from '@/components/faq';
-import Footer from '@/components/footer';
-import Gallery from '@/components/gallery';
-import Header from '@/components/header';
-import Hero from '@/components/hero';
-import Leads from '@/components/leads';
-import Schedule from '@/components/schedule';
-import Sponsors from '@/components/sponsors';
+import Contact from '@/components/home/contact';
+import EventHighlights from '@/components/home/event-highlights';
+import Gallery from '@/components/home/gallery';
+import Hero from '@/components/home/hero';
+import Leads from '@/components/home/leads';
+import Venue from '@/components/home/venue';
+import { PreviousSponsors } from '@/components/sponsors/previous-sponsors';
 
 export default function Home() {
   return (
-    <main className="bg-navy">
-      <Header />
+    <main>
       <Hero />
-      <About />
-      <Schedule />
-      <Competitions />
+      <EventHighlights />
+      {/* <Schedule /> */}
+      <PreviousSponsors
+        sponsors={previousSponsorsData}
+        title="Our Esteemed Alumni Supporters"
+        className="pt-10 pb-20"
+        logoHeightClass="h-32"
+        gridCols={{
+          base: 'grid-cols-3',
+        }}
+      />
       <Leads />
       <Gallery />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <FAQ />
       <Contact />
-      <Footer />
+      <Venue />
     </main>
   );
 }
