@@ -32,7 +32,7 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/web-e-thon.jpg',
     // prizeWinner: 'PKR 40,000',
     // prizeRunnerUp: 'PKR 20,000',
-    // detailsPdfUrl: '/files/web-e-thon-guide.pdf',
+    detailsPdfUrl: '/assets/files/competitions/web-e-thon.pdf',
   },
   {
     id: 'app-dev',
@@ -43,7 +43,7 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/app-dev.jpg',
     // prizeWinner: 'PKR 35,000',
     // prizeRunnerUp: 'PKR 17,500',
-    // detailsPdfUrl: '/files/game-dev-guide.pdf', // Add if available
+    // detailsPdfUrl: '/assets/files/competitions/game-dev-guide.pdf', // Add if available
   },
   {
     id: 'machine-learning',
@@ -54,7 +54,7 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/machine-learning.jpg',
     // prizeWinner: 'PKR 35,000',
     // prizeRunnerUp: 'PKR 17,500',
-    // detailsPdfUrl: '/files/game-dev-guide.pdf', // Add if available
+    detailsPdfUrl: '/assets/files/competitions/machine-learning.pdf',
   },
   {
     id: 'query-master',
@@ -65,7 +65,7 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/query-master.jpg',
     // prizeWinner: 'PKR 35,000',
     // prizeRunnerUp: 'PKR 17,500',
-    // detailsPdfUrl: '/files/game-dev-guide.pdf', // Add if available
+    detailsPdfUrl: '/assets/files/competitions/query-master.pdf',
   },
   {
     id: 'think-tank',
@@ -76,7 +76,7 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/think-tank.jpg',
     // prizeWinner: 'PKR 35,000',
     // prizeRunnerUp: 'PKR 17,500',
-    // detailsPdfUrl: '/files/game-dev-guide.pdf', // Add if available
+    // detailsPdfUrl: '/assets/files/competitions/think-tank.pdf',
   },
   {
     id: 'ui-ux-design',
@@ -87,7 +87,7 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/poster.png',
     // prizeWinner: 'PKR 8,000',
     // prizeRunnerUp: 'PKR 4,000',
-    // detailsPdfUrl: '/files/poster-design-guide.pdf',
+    detailsPdfUrl: '/assets/files/competitions/ui-ux.pdf',
   },
   {
     id: 'reel-competition',
@@ -109,7 +109,7 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/techno-hunt.jpg',
     // prizeWinner: 'Team Goodies Basket',
     // prizeRunnerUp: 'Runner-up Basket',
-    // detailsPdfUrl: '/files/techno-hunt-guide.pdf',
+    // detailsPdfUrl: '/assets/files/competitions/scavenger-hunt.pdf',
   },
   {
     id: 'tekken',
@@ -120,7 +120,7 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/tekken.jpg',
     // prizeWinner: 'PKR 10,000 + Gaming Gear',
     // prizeRunnerUp: 'PKR 5,000',
-    detailsPdfUrl: '/files/esports-guide.pdf', // Example: Combined guide
+    detailsPdfUrl: '/assets/files/competitions/tekken.pdf',
   },
   {
     id: 'fifa',
@@ -131,6 +131,6 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/fifa.jpg',
     // prizeWinner: 'PKR 10,000 + Gaming Gear',
     // prizeRunnerUp: 'PKR 5,000',
-    detailsPdfUrl: '/files/esports-guide.pdf', // Example: Combined guide
+    detailsPdfUrl: '/assets/files/competitions/fifa.pdf',
   },
 ];
