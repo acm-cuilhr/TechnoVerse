@@ -171,7 +171,7 @@ export default function Header() {
               className="text-white"
             >
               <a
-                href="https://tally.so/r/3jBJ9E" // Replace with your registration link
+                href={process.env.NEXT_PUBLIC_REGISTRATION_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -201,8 +201,6 @@ export default function Header() {
               {/* Mobile Menu Content... */}
               <div className="mb-8">
                 <SheetClose asChild>
-                  {' '}
-                  {/* Close sheet when clicking logo */}
                   <Link
                     href="/"
                     className="scrollto inline-block"
@@ -226,8 +224,6 @@ export default function Header() {
               </nav>
               <div className="mt-8 pt-6 border-t border-border">
                 <SheetClose asChild>
-                  {' '}
-                  {/* Close sheet when clicking button */}
                   <Button
                     variant="secondary"
                     size="lg"
@@ -235,7 +231,7 @@ export default function Header() {
                     asChild
                   >
                     <a
-                      href="https://tally.so/r/3jBJ9E"
+                      href={process.env.NEXT_PUBLIC_REGISTRATION_LINK}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

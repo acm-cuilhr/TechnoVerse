@@ -14,8 +14,8 @@ const TECHNOVERSE_LINKEDIN_URL =
   'https://www.linkedin.com/company/technoverse-cui-lahore/';
 const ACM_INSTAGRAM_URL = 'https://instagram.com/acm.cuilhr';
 const ACM_LINKEDIN_URL = 'https://linkedin.com/company/acmcuilhr';
-const CONTACT_EMAIL = 'technoverse.cuilahore@example.com';
-const SPONSOR_FORM_URL = 'https://tally.so/r/3J6J9C';
+const CONTACT_EMAIL = 'acmchapter@cuilahore.edu.pk';
+const SPONSOR_FORM_URL = process.env.NEXT_PUBLIC_SPONSOR_FORM_URL || '#';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -49,7 +49,12 @@ export default function Footer() {
               collaboration, and competition. Organized by ACM CUI Lahore.
             </p>
 
-            <Button variant="secondary" size="sm" asChild>
+            <Button
+              variant="secondary"
+              size="sm"
+              asChild
+              className="text-white"
+            >
               <a
                 href={SPONSOR_FORM_URL}
                 target="_blank"

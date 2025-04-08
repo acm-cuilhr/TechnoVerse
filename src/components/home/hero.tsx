@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-primary/80"></div>{' '}
       {/* Increased opacity slightly */}
       {/* Main content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 pt-20">
         {/* Use theme foreground/secondary colors and default font (font-sans) */}
         <h1 className="text-primary-foreground font-semibold text-5xl md:text-7xl uppercase mb-4 tracking-tight">
           Techno<span className="text-secondary">Verse 4.0</span>{' '}

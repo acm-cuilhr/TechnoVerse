@@ -5,7 +5,6 @@ import Contact from '@/components/home/contact';
 import EventHighlights from '@/components/home/event-highlights';
 import Gallery from '@/components/home/gallery';
 import Hero from '@/components/home/hero';
-import Leads from '@/components/home/leads';
 import Venue from '@/components/home/venue';
 import { PreviousSponsors } from '@/components/sponsors/previous-sponsors';
 
@@ -24,7 +23,6 @@ export default function Home() {
           base: 'grid-cols-3',
         }}
       />
-      <Leads />
       <Gallery />
       {/* <Sponsors /> */}
       <FAQ />
