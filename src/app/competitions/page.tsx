@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Competition, competitionsData } from '@/data/competitions';
-import { Award, Download, Trophy } from 'lucide-react';
+import { Award, Coins, Download, Trophy, Users } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -69,48 +69,79 @@ export default function CompetitionsPage() {
 
               {selectedCompetition.prizeWinner ||
               selectedCompetition.prizeRunnerUp ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="bg-muted/50 p-4 rounded-lg border border-border">
-                    <h4 className="text-sm font-semibold text-muted-foreground mb-1 flex items-center">
-                      <Trophy size={16} className="mr-2 text-secondary" />{' '}
-                      Winner Prize
-                    </h4>
-                    <p className="text-lg font-bold text-secondary">
-                      {selectedCompetition.prizeWinner}
-                    </p>
+                    <div className="flex items-center mb-2">
+                      <Trophy size={48} className="mr-2 text-secondary" />
+                      <div>
+                        <h4 className="text-sm font-semibold text-muted-foreground mb-1 flex items-center">
+                          Winner Prize
+                        </h4>
+                        <p className="text-lg font-bold text-secondary">
+                          {selectedCompetition.prizeWinner}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   <div className="bg-muted/50 p-4 rounded-lg border border-border">
-                    <h4 className="text-sm font-semibold text-muted-foreground mb-1 flex items-center">
+                    <div className="flex items-center mb-2">
                       <Award
-                        size={16}
+                        size={48}
                         className="mr-2 text-muted-foreground/80"
-                      />{' '}
-                      Runner-up Prize
-                    </h4>
-                    <p className="text-lg font-bold text-foreground">
-                      {selectedCompetition.prizeRunnerUp}
-                    </p>
+                      />
+                      <div>
+                        <h4 className="text-sm font-semibold text-muted-foreground mb-1 flex items-center">
+                          Runner-up Prize
+                        </h4>
+                        <p className="text-lg font-bold text-foreground">
+                          {selectedCompetition.prizeRunnerUp}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ) : (
-                <div className="bg-muted/50 p-4 rounded-lg border border-border mb-6">
+                <div className="bg-muted/50 p-4 rounded-lg border border-border">
                   <p className="text-sm text-muted-foreground italic">
                     Prize details coming soon.
                   </p>
                 </div>
               )}
 
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-muted/50 p-4 rounded-lg border border-border">
+                  <h4 className="text-sm font-semibold text-muted-foreground mb-1 flex items-center">
+                    <Coins size={16} className="mr-2 text-secondary" />{' '}
+                    Registration Fee
+                  </h4>
+                  <p className="text-lg font-bold text-secondary">
+                    {selectedCompetition.registrationFee}
+                  </p>
+                </div>
+                <div className="bg-muted/50 p-4 rounded-lg border border-border">
+                  <h4 className="text-sm font-semibold text-muted-foreground mb-1 flex items-center">
+                    <Users
+                      size={16}
+                      className="mr-2 text-muted-foreground/80"
+                    />
+                    Team Members
+                  </h4>
+                  <p className="text-lg font-bold text-foreground">
+                    {selectedCompetition.teamSize}
+                  </p>
+                </div>
+              </div>
+
               <DialogFooter className="mt-6 sm:justify-start">
                 {selectedCompetition.detailsPdfUrl ? (
                   <Button asChild variant="secondary" size="lg">
                     <a
                       href={selectedCompetition.detailsPdfUrl}
-                      download
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener"
                     >
                       <Download className="mr-2 h-5 w-5" />
-                      Download Full Guide
+                      See Competition Details
                     </a>
                   </Button>
                 ) : (

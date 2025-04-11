@@ -9,6 +9,8 @@ export interface Competition {
   prizeWinner?: string; // Prize money as string (e.g., "PKR 50,000")
   prizeRunnerUp?: string; // Prize money as string (e.g., "PKR 25,000")
   detailsPdfUrl?: string; // Optional path to the detailed PDF guide
+  registrationFee: string;
+  teamSize: string;
 }
 
 export const competitionsData: Competition[] = [
@@ -21,7 +23,9 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/coding-spree.jpg',
     // prizeWinner: 'PKR 30,000',
     // prizeRunnerUp: 'PKR 15,000',
-    // detailsPdfUrl: '/files/coding-spree-guide.pdf',
+    registrationFee: 'Rs. 3000',
+    teamSize: '1-3',
+    detailsPdfUrl: '/files/coding-spree.pdf',
   },
   {
     id: 'web-e-thon',
@@ -32,6 +36,8 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/web-e-thon.jpg',
     // prizeWinner: 'PKR 40,000',
     // prizeRunnerUp: 'PKR 20,000',
+    registrationFee: 'Rs. 2500',
+    teamSize: '1-3',
     detailsPdfUrl: '/assets/files/competitions/web-e-thon.pdf',
   },
   {
@@ -43,7 +49,9 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/app-dev.jpg',
     // prizeWinner: 'PKR 35,000',
     // prizeRunnerUp: 'PKR 17,500',
-    // detailsPdfUrl: '/assets/files/competitions/game-dev-guide.pdf', // Add if available
+    registrationFee: 'Rs. 2500',
+    teamSize: '1-3',
+    detailsPdfUrl: '/assets/files/competitions/app-development.pdf',
   },
   {
     id: 'machine-learning',
@@ -54,6 +62,8 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/machine-learning.jpg',
     // prizeWinner: 'PKR 35,000',
     // prizeRunnerUp: 'PKR 17,500',
+    registrationFee: 'Rs. 2500',
+    teamSize: '1-3',
     detailsPdfUrl: '/assets/files/competitions/machine-learning.pdf',
   },
   {
@@ -65,6 +75,8 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/query-master.jpg',
     // prizeWinner: 'PKR 35,000',
     // prizeRunnerUp: 'PKR 17,500',
+    registrationFee: 'Rs. 1500',
+    teamSize: '1-2',
     detailsPdfUrl: '/assets/files/competitions/query-master.pdf',
   },
   {
@@ -76,7 +88,9 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/think-tank.jpg',
     // prizeWinner: 'PKR 35,000',
     // prizeRunnerUp: 'PKR 17,500',
-    // detailsPdfUrl: '/assets/files/competitions/think-tank.pdf',
+    registrationFee: 'Rs. 1200',
+    teamSize: '2-4',
+    detailsPdfUrl: '/assets/files/competitions/think-tank.pdf',
   },
   {
     id: 'ui-ux-design',
@@ -87,6 +101,8 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/poster.png',
     // prizeWinner: 'PKR 8,000',
     // prizeRunnerUp: 'PKR 4,000',
+    registrationFee: 'Rs. 1500',
+    teamSize: '1-2',
     detailsPdfUrl: '/assets/files/competitions/ui-ux.pdf',
   },
   {
@@ -98,7 +114,9 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/reel.jpg',
     // prizeWinner: 'PKR 10,000',
     // prizeRunnerUp: 'PKR 5,000',
-    // detailsPdfUrl: '/files/reel-guide.pdf',
+    registrationFee: 'Rs. 800',
+    teamSize: '1',
+    detailsPdfUrl: '/files/reel.pdf',
   },
   {
     id: 'scavenger-hunt',
@@ -109,7 +127,9 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/techno-hunt.jpg',
     // prizeWinner: 'Team Goodies Basket',
     // prizeRunnerUp: 'Runner-up Basket',
-    // detailsPdfUrl: '/assets/files/competitions/scavenger-hunt.pdf',
+    registrationFee: 'Rs. 2000',
+    teamSize: '1-5',
+    detailsPdfUrl: '/assets/files/competitions/scavenger-hunt.pdf',
   },
   {
     id: 'tekken',
@@ -120,6 +140,8 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/tekken.jpg',
     // prizeWinner: 'PKR 10,000 + Gaming Gear',
     // prizeRunnerUp: 'PKR 5,000',
+    registrationFee: 'Rs. 1000',
+    teamSize: '1',
     detailsPdfUrl: '/assets/files/competitions/tekken.pdf',
   },
   {
@@ -131,6 +153,8 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/fifa.jpg',
     // prizeWinner: 'PKR 10,000 + Gaming Gear',
     // prizeRunnerUp: 'PKR 5,000',
+    registrationFee: 'Rs. 1000',
+    teamSize: '1',
     detailsPdfUrl: '/assets/files/competitions/fifa.pdf',
   },
 ];

@@ -1,6 +1,8 @@
 import type React from 'react';
 import { Inter, Raleway } from 'next/font/google';
+import { announcements } from '@/data/announcements';
 
+import AnnouncementBanner from '@/components/announcement-banner';
 import Header from '@/components/header';
 import Footer from '@/components/home/footer';
 
@@ -34,6 +36,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${raleway.variable} font-sans`}>
         <Header />
+        <AnnouncementBanner announcements={announcements} />
         {children}
         <Footer />
       </body>
