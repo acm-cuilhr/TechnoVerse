@@ -19,7 +19,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 // --- Event Stats Data (Replace with realistic estimates for 2025 event) ---
 const eventStats = [
   { icon: Award, value: 650, suffix: 'K+', label: 'Prize Pool (PKR)' },
-  { icon: Component, value: 10, suffix: '', label: 'Competitions' },
+  { icon: Component, value: 11, suffix: '', label: 'Competitions' },
   { icon: Users, value: 1, suffix: 'K+', label: 'Participants Expected' },
   { icon: Clock4, value: 48, suffix: '+', label: 'Hours of Tech & Fun' },
 ];
