@@ -1,6 +1,7 @@
 // src/components/hero.tsx (or similar path)
 'use client';
 
+import { Button } from '../ui/button';
 import { CountdownTimer } from './countdown-timer'; // Assuming countdown-timer is in the same folder
 
 export default function Hero() {
@@ -32,6 +33,21 @@ export default function Hero() {
         </p>
         {/* Render the updated Countdown Timer */}
         <CountdownTimer targetDate={eventDate} />
+
+        <Button
+          variant="secondary"
+          size="lg"
+          asChild
+          className="text-white mt-6 w-48 md:w-56"
+        >
+          <a
+            href={process.env.NEXT_PUBLIC_REGISTRATION_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Register Now
+          </a>
+        </Button>
       </div>
     </section>
   );

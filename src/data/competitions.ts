@@ -25,7 +25,7 @@ export const competitionsData: Competition[] = [
     // prizeRunnerUp: 'PKR 15,000',
     registrationFee: 'Rs. 3000',
     teamSize: '1-3',
-    detailsPdfUrl: '/files/coding-spree.pdf',
+    detailsPdfUrl: '/assets/files/competitions/coding-spree.pdf',
   },
   {
     id: 'web-e-thon',
@@ -116,7 +116,7 @@ export const competitionsData: Competition[] = [
     // prizeRunnerUp: 'PKR 5,000',
     registrationFee: 'Rs. 800',
     teamSize: '1',
-    detailsPdfUrl: '/files/reel.pdf',
+    detailsPdfUrl: '/assets/files/competitions/reel.pdf',
   },
   {
     id: 'scavenger-hunt',
