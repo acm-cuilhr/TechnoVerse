@@ -23,7 +23,7 @@ export const competitionsData: Competition[] = [
     image: '/assets/images/competitions/coding-spree.jpg',
     // prizeWinner: 'PKR 30,000',
     // prizeRunnerUp: 'PKR 15,000',
-    registrationFee: 'Rs. 3000',
+    registrationFee: 'Rs. 2500',
     teamSize: '1-3',
     detailsPdfUrl: '/assets/files/competitions/coding-spree.pdf',
   },
