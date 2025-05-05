@@ -20,6 +20,8 @@ const AnnouncementBanner: React.FC<AnnouncementBannerProps> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  console.log(announcements);
+
   // Cycle through announcements if there is more than one.
   useEffect(() => {
     if (!announcements || announcements.length <= 1) return;
@@ -35,9 +37,13 @@ const AnnouncementBanner: React.FC<AnnouncementBannerProps> = ({
   // Create an object that holds either dangerouslySetInnerHTML or children,
   // but not both.
   const contentProps =
-    typeof currentAnnouncement.message === 'string'
-      ? { dangerouslySetInnerHTML: { __html: currentAnnouncement.message } }
-      : { children: currentAnnouncement.message };
+    typeof currentAnnouncement?.message === 'string'
+      ? { dangerouslySetInnerHTML: { __html: currentAnnouncement?.message } }
+      : { children: currentAnnouncement?.message };
+
+  if (!currentAnnouncement) {
+    return null;
+  }
 
   return (
     <div

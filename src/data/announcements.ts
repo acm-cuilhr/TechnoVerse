@@ -8,8 +8,8 @@ export interface Announcement {
 }
 
 export const announcements: Announcement[] = [
-  {
-    message:
-      'Use coupon code <strong><i>EARLYBIRD30</i></strong> to get <strong><i>30%</i></strong> discount on all competitions.',
-  },
+  // {
+  //   message:
+  //     'Use coupon code <strong><i>EARLYBIRD30</i></strong> to get <strong><i>30%</i></strong> discount on all competitions.',
+  // },
 ];
