@@ -6,7 +6,7 @@ import { CountdownTimer } from './countdown-timer'; // Assuming countdown-timer 
 
 export default function Hero() {
   // Set event date according to current year - May 24, 2025 (Pakistan Standard Time)
-  const eventDate = new Date('2025-05-24T09:00:00+05:00'); // Start time 9 AM PST
+  const eventDate = new Date('2025-05-31T09:00:00+05:00'); // Start time 9 AM PST
 
   return (
     <section
@@ -29,7 +29,8 @@ export default function Hero() {
           <span className="font-medium">CONNECT</span>
         </p>
         <p className="text-primary-foreground/80 font-medium text-lg md:text-xl mb-8">
-          May 24th - 25th, 2025 | COMSATS University Islamabad, Lahore Campus
+          May 31st - June 1st, 2025 | COMSATS University Islamabad, Lahore
+          Campus
         </p>
         {/* Render the updated Countdown Timer */}
         <CountdownTimer targetDate={eventDate} />

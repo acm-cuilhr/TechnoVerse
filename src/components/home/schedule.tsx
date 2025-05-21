@@ -92,13 +92,13 @@ export default function Schedule() {
             >
               {' '}
               {/* Style active tab */}
-              Day 1 <span className="hidden sm:inline ml-1"> (May 24th)</span>
+              Day 1 <span className="hidden sm:inline ml-1"> (May 31st)</span>
             </TabsTrigger>
             <TabsTrigger
               value="day-2"
               className="text-base h-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
             >
-              Day 2 <span className="hidden sm:inline ml-1"> (May 25th)</span>
+              Day 2 <span className="hidden sm:inline ml-1"> (June 1st)</span>
             </TabsTrigger>
           </TabsList>
 

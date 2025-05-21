@@ -104,7 +104,7 @@ export function CountdownTimer({ targetDate }: { targetDate: Date }) {
           <p className="text-muted-foreground text-lg">
             Join us from{' '}
             <span className="font-semibold text-secondary">
-              May 24th - 25th, 2025
+              May 31th - June 1st, 2025
             </span>
             .
           </p>
