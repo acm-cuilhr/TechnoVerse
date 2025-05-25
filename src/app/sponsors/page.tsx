@@ -1,10 +1,10 @@
 // src/app/sponsors/page.tsx
 'use client';
 
-import { previousSponsorsData } from '@/data/previous-sponsors';
+import { allSponsorsData, categoryOrder } from '@/data/sponsors';
 
 import HeroSection from '@/components/hero-section';
-import { PreviousSponsors } from '@/components/sponsors/previous-sponsors';
+import { SponsorsDisplay } from '@/components/sponsors/sponsors-display';
 
 export default function SponsorsPage() {
   return (
@@ -16,15 +16,15 @@ export default function SponsorsPage() {
       />
       <div className="container mx-auto px-4 py-16 md:py-24">
         {/* Use the reusable component */}
-        {/* <SponsorsDisplay
+        <SponsorsDisplay
           sponsorsData={allSponsorsData}
           categoryOrder={categoryOrder}
           // categoryStyles can be omitted if defaults are okay, or pass custom ones
           // useMarqueeFor is omitted (no marquee on this page)
           showSeparators={true} // Explicitly show separators
-        /> */}
+        />
 
-        <PreviousSponsors
+        {/* <PreviousSponsors
           sponsors={previousSponsorsData}
           title="Our Esteemed Alumni Supporters"
           className="pt-10 pb-20"
@@ -32,7 +32,7 @@ export default function SponsorsPage() {
           gridCols={{
             base: 'grid-cols-3',
           }}
-        />
+        /> */}
       </div>
     </div>
   );

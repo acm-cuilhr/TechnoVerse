@@ -1,12 +1,12 @@
 // src/components/sponsors/sponsor-logo.tsx
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Sponsor } from '@/data/sponsors'; // Assuming type is defined here or imported
+import type { Sponsor } from '@/data/sponsors';
 
 interface SponsorLogoProps {
   sponsor: Sponsor;
   heightClass: string; // e.g., "h-24"
-  className?: string; // For additional container styling
+  className?: string; // For additional container styling (like padding)
 }
 
 export function SponsorLogo({
@@ -16,14 +16,15 @@ export function SponsorLogo({
 }: SponsorLogoProps) {
   const content = (
     <div
-      className={`relative w-full ${heightClass} flex items-center justify-center ${className}`}
+      // Use w-full to fill parent, heightClass sets the height.
+      className={`relative w-64 md:w-96 ${heightClass} group-hover:scale-105 transition-transform duration-300 ease-in-out ${className}`}
     >
       <Image
         src={sponsor.logoUrl}
         alt={`${sponsor.name} logo`}
-        fill
-        className="object-contain" // Ensures logo fits within dimensions
-        sizes="(max-width: 768px) 25vw, (max-width: 1200px) 20vw, 15vw" // Generic sizes
+        fill // Requires parent to be relative and have dimensions.
+        className="object-contain"
+        sizes="(max-width: 640px) 30vw, (max-width: 1024px) 20vw, 15vw"
       />
     </div>
   );
@@ -35,7 +36,7 @@ export function SponsorLogo({
         href={sponsor.websiteUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="block p-2 transition-transform duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md"
+        className="block p-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
         aria-label={`Visit ${sponsor.name}`}
       >
         {content}
@@ -43,6 +44,6 @@ export function SponsorLogo({
     );
   }
 
-  // Render just the image container if no link
-  return <div className="p-2">{content}</div>;
+  // Render just the image container if no link (still add padding)
+  return <div className="block p-2">{content}</div>;
 }

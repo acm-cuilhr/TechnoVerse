@@ -83,22 +83,24 @@ export default function CompetitionsPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-muted/50 p-4 rounded-lg border border-border">
-                    <div className="flex items-center mb-2">
-                      <Award
-                        size={48}
-                        className="mr-2 text-muted-foreground/80"
-                      />
-                      <div>
-                        <h4 className="text-sm font-semibold text-muted-foreground mb-1 flex items-center">
-                          Runner-up Prize
-                        </h4>
-                        <p className="text-lg font-bold text-foreground">
-                          {selectedCompetition.prizeRunnerUp}
-                        </p>
+                  {selectedCompetition.prizeRunnerUp && (
+                    <div className="bg-muted/50 p-4 rounded-lg border border-border">
+                      <div className="flex items-center mb-2">
+                        <Award
+                          size={48}
+                          className="mr-2 text-muted-foreground/80"
+                        />
+                        <div>
+                          <h4 className="text-sm font-semibold text-muted-foreground mb-1 flex items-center">
+                            Runner-up Prize
+                          </h4>
+                          <p className="text-lg font-bold text-foreground">
+                            {selectedCompetition.prizeRunnerUp}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               ) : (
                 <div className="bg-muted/50 p-4 rounded-lg border border-border">
