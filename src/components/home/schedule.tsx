@@ -15,22 +15,38 @@ interface ScheduleItem {
 
 // Schedule data remains the same
 const dayOneSchedule: ScheduleItem[] = [
-  { time: '12:00 PM', title: 'Gathering of Teams' },
-  { time: '1:30 PM - 2:00 PM', title: 'Opening Ceremony / Ribbon Cutting' },
-  { time: '2:00 PM - 7:00 PM', title: 'Fifa / Tekken', subtitle: 'Round 1' },
-  { time: '2:30 PM - 4:00 PM', title: 'Panel / Speaker Talks' },
-  { time: '04:00 PM - 06:00 PM', title: 'Poster Design' },
-  { time: '07:00 PM', title: 'Palestine Solidarity Activity' },
+  { time: '10:00 AM - 08:00 PM', title: 'Web-e-Thon' },
+  { time: '10:00 AM - 08:00 PM', title: 'App Development' },
+  { time: '10:00 AM - 08:00 PM', title: 'Machine Learning' },
+  { time: '11:00 AM - 02:00 PM', title: 'Coding Spree', subtitle: 'Round 1' },
+  { time: '12:00 PM - 06:00 PM', title: 'FIFA', subtitle: 'Round 1' },
+  { time: '12:00 PM - 06:00 PM', title: 'Tekken', subtitle: 'Round 1' },
+  { time: '12:00 AM - 01:00 PM', title: 'Panel Talk' },
+  { time: '01:00 PM - 04:00 PM', title: 'Think Tank' },
 ];
 
 const dayTwoSchedule: ScheduleItem[] = [
-  { time: '10:00 AM - 3:00 PM', title: 'Web-e-Thon' },
-  { time: '10:00 AM - 3:00 PM', title: 'Fifa / Tekken', subtitle: 'Round 2' },
-  { time: '10:30 AM - 12:00 PM', title: 'Coding Spree', subtitle: 'Round 1' },
-  { time: '01:00 PM - 03:00 PM', title: 'Coding Spree', subtitle: 'Round 2' },
-  { time: '01:00 PM - 03:00 PM', title: 'Notion Template Design' },
-  { time: '03:00 PM - 06:00 PM', title: 'Techno Hunt' },
-  { time: '07:00 PM', title: 'Closing Ceremony / Exclusive Dinner' },
+  { time: '10:00 AM - 01:00 PM', title: 'Web-e-Thon', subtitle: 'Evaluations' },
+  {
+    time: '10:00 AM - 01:00 PM',
+    title: 'App Development',
+    subtitle: 'Evaluations',
+  },
+  { time: '10:00 AM - 03:00 PM', title: 'Coding Spree', subtitle: 'Round 2' },
+  { time: '10:00 AM - 04:00 PM', title: 'UI / UX' },
+  {
+    time: '12:00 PM - 03:00 PM',
+    title: 'FIFA',
+    subtitle: 'Semifinals & Finals',
+  },
+  {
+    time: '12:00 PM - 03:00 PM',
+    title: 'Tekken',
+    subtitle: 'Semifinals & Finals',
+  },
+  { time: '01:00 PM - 03:00 PM', title: 'Query Master' },
+  { time: '04:00 PM - 06:00 PM', title: 'Scavenger Hunt' },
+  { time: '07:00 PM - 10:00 PM', title: 'Closing Ceremony & Dinner' },
 ];
 
 // Reusable component for displaying schedule rows
@@ -124,7 +140,10 @@ export default function Schedule() {
         {/* Download Button using Shadcn Button */}
         <div className="text-center mt-12">
           <Button asChild size="lg" variant="secondary">
-            <a href="/files/TechnoVerse-Document.pdf" download>
+            <a
+              href="/assets/files/technoverse-competition-details.pdf"
+              download
+            >
               {' '}
               {/* Ensure this path is correct */}
               <Download className="mr-2 h-5 w-5" />

@@ -3,6 +3,7 @@ import Contact from '@/components/home/contact';
 import EventHighlights from '@/components/home/event-highlights';
 import Gallery from '@/components/home/gallery';
 import Hero from '@/components/home/hero';
+import Schedule from '@/components/home/schedule';
 import SponsorsSection from '@/components/home/sponsors';
 import Venue from '@/components/home/venue';
 
@@ -11,8 +12,8 @@ export default function Home() {
     <main>
       <Hero />
       <EventHighlights />
+      <Schedule />
       <SponsorsSection />
-      {/* <Schedule /> */}
       {/* <PreviousSponsors
         sponsors={previousSponsorsData}
         title="Our Esteemed Alumni Supporters"
