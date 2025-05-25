@@ -24,7 +24,7 @@ export const allSponsorsData: Sponsor[] = [
   {
     id: 'ex1',
     name: 'InvoZone',
-    logoUrl: '/assets/images/sponsors/present/invozone-logo.png',
+    logoUrl: '/assets/images/sponsors/present/invozone-logo.svg',
     category: 'Exclusive',
     websiteUrl: '#',
     description: 'Our Exclusive Partner Powering the Event.',
