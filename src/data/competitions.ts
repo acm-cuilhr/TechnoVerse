@@ -1,160 +1,201 @@
-// src/data/competitions.ts (Example file location)
+// src/data/competitions.ts
 
 export interface Competition {
-  id: string; // Unique identifier
+  id: string;
   name: string;
-  description: string; // Short description for the card
-  longDescription: string; // More detailed description for the modal
+  description: string;
+  longDescription: string;
   image: string;
-  prizeWinner?: string; // Prize money as string (e.g., "PKR 50,000")
-  prizeRunnerUp?: string; // Prize money as string (e.g., "PKR 25,000")
-  detailsPdfUrl?: string; // Optional path to the detailed PDF guide
+  prizeWinner?: string;
+  prizeRunnerUp?: string;
+  detailsPdfUrl?: string;
   registrationFee: string;
   teamSize: string;
+  category: 'tech' | 'non-tech';
 }
 
 export const competitionsData: Competition[] = [
+  // ── Tech Competitions ──
   {
     id: 'coding-spree',
     name: 'Coding Spree',
-    description: 'Solve problems under pressure.',
+    description: 'Solve problems under intense time pressure.',
     longDescription:
-      'Put your problem-solving and programming skills to the ultimate test. Compete against the clock and fellow coders to solve algorithmic challenges ranging in difficulty. Speed, accuracy, and efficiency are key!',
+      'A timed challenge where participants solve programming problems in languages of their choice. Accuracy and efficiency are key.',
     image: '/assets/images/competitions/coding-spree.jpg',
-    prizeWinner: 'PKR 40,000',
-    prizeRunnerUp: 'PKR 20,000',
+    prizeWinner: 'PKR 70,000',
+    prizeRunnerUp: 'PKR 30,000',
     registrationFee: 'Rs. 2500',
     teamSize: '1-3',
     detailsPdfUrl: '/assets/files/competitions/coding-spree.pdf',
+    category: 'tech',
   },
   {
-    id: 'web-e-thon',
-    name: 'Web-e-Thon',
-    description: 'Build stunning web experiences.',
+    id: 'web-a-thon',
+    name: 'Web-a-Thon',
+    description: 'Build responsive and functional websites.',
     longDescription:
-      'A playground for web developers and designers. Teams will design and develop a functional and visually appealing website based on a given theme within the time limit. Focus on creativity, UX, and technical execution.',
+      'Participants will build responsive and functional websites based on provided themes. Judging will focus on UI/UX, responsiveness, and performance.',
     image: '/assets/images/competitions/web-e-thon.jpg',
-    prizeWinner: 'PKR 40,000',
-    prizeRunnerUp: 'PKR 20,000',
+    prizeWinner: 'PKR 70,000',
+    prizeRunnerUp: 'PKR 30,000',
     registrationFee: 'Rs. 2500',
     teamSize: '1-3',
-    detailsPdfUrl: '/assets/files/competitions/web-e-thon.pdf',
+    detailsPdfUrl: '/assets/files/competitions/web-a-thon.pdf',
+    category: 'tech',
   },
   {
     id: 'app-dev',
     name: 'App Development',
-    description: 'Create innovative mobile apps.',
+    description: 'Create apps solving real-world problems.',
     longDescription:
-      'Develop a mobile application that addresses a specific problem or enhances user experience. Teams will be judged on creativity, functionality, and user interface design.',
+      'Create a mobile or desktop app to solve real-world problems. Teams will be judged on innovation, design, and functionality.',
     image: '/assets/images/competitions/app-dev.jpg',
-    prizeWinner: 'PKR 30,000',
-    prizeRunnerUp: 'PKR 15,500',
+    prizeWinner: 'PKR 70,000',
+    prizeRunnerUp: 'PKR 30,000',
     registrationFee: 'Rs. 2500',
     teamSize: '1-3',
     detailsPdfUrl: '/assets/files/competitions/app-development.pdf',
+    category: 'tech',
   },
   {
-    id: 'machine-learning',
-    name: 'Machine Learning Challenge',
-    description: 'Unleash the power of AI.',
+    id: 'project-exhibition',
+    name: 'Project Exhibition',
+    description: 'Showcase innovative software or hardware projects.',
     longDescription:
-      'Dive into the world of machine learning! Participants will be given a dataset and tasked with building a predictive model. Creativity in feature engineering and model selection will be key to success.',
-    image: '/assets/images/competitions/machine-learning.jpg',
-    prizeWinner: 'PKR 40,000',
-    prizeRunnerUp: 'PKR 20,500',
-    registrationFee: 'Rs. 2500',
-    teamSize: '1-3',
-    detailsPdfUrl: '/assets/files/competitions/machine-learning.pdf',
+      'Participants will showcase innovative software or hardware projects, highlighting creativity, development process, and real-world applicability. Judging will focus on originality, technical depth, and practical impact.',
+    image: '/assets/images/competitions/poster.png',
+    prizeWinner: 'PKR 60,000',
+    prizeRunnerUp: 'PKR 30,000',
+    registrationFee: 'Rs. 2000',
+    teamSize: '1-4',
+    detailsPdfUrl: '/assets/files/competitions/project-exhibition.pdf',
+    category: 'tech',
   },
   {
     id: 'query-master',
     name: 'Query Master',
-    description: 'Master the art of SQL.',
+    description: 'Master complex SQL challenges.',
     longDescription:
-      'Test your SQL skills in this challenge! Participants will be given a database and a set of queries to solve. The fastest and most accurate solutions will win.',
+      'A database-based challenge where participants write SQL queries to solve complex problems. Speed and accuracy are essential.',
     image: '/assets/images/competitions/query-master.jpg',
-    prizeWinner: 'PKR 15,000',
-    prizeRunnerUp: 'PKR 7,500',
+    prizeWinner: 'PKR 40,000',
+    prizeRunnerUp: 'PKR 20,000',
     registrationFee: 'Rs. 1500',
     teamSize: '1-2',
     detailsPdfUrl: '/assets/files/competitions/query-master.pdf',
+    category: 'tech',
+  },
+  {
+    id: 'machine-learning',
+    name: 'Machine Learning',
+    description: 'Build intelligent models from datasets.',
+    longDescription:
+      'Participants will work with datasets to build intelligent models. Evaluation is based on accuracy and model performance.',
+    image: '/assets/images/competitions/machine-learning.jpg',
+    prizeWinner: 'PKR 40,000',
+    prizeRunnerUp: 'PKR 20,000',
+    registrationFee: 'Rs. 2500',
+    teamSize: '1-3',
+    detailsPdfUrl: '/assets/files/competitions/machine-learning.pdf',
+    category: 'tech',
   },
   {
     id: 'think-tank',
     name: 'Think Tank',
-    description: 'Innovate and solve real-world problems.',
+    description: 'Pitch your startup ideas to judges.',
     longDescription:
-      'Join us for a brainstorming session where teams will tackle real-world problems. Participants will present their innovative solutions, and the best ideas will be recognized.',
+      'Similar to Shark Tank, students will pitch their innovative startup ideas or products to a panel of judges and potential investors.',
     image: '/assets/images/competitions/think-tank.jpg',
-    prizeWinner: 'PKR 20,000',
-    prizeRunnerUp: 'PKR 10,500',
+    prizeWinner: 'PKR 30,000',
+    prizeRunnerUp: 'PKR 15,000',
     registrationFee: 'Rs. 1200',
     teamSize: '2-4',
     detailsPdfUrl: '/assets/files/competitions/think-tank.pdf',
+    category: 'tech',
   },
   {
-    id: 'ui-ux-design',
-    name: 'UI/UX Design Challenge',
-    description: 'Design user-friendly interfaces.',
+    id: 'ui-ux',
+    name: 'UI/UX Competition',
+    description: 'Design sleek, user-friendly interfaces.',
     longDescription:
-      'Create a user-friendly and visually appealing interface for a given application. Participants will be judged on creativity, usability, and design principles.',
+      'Design sleek and user-friendly interfaces for web or mobile platforms. Creativity and usability are major judging factors.',
     image: '/assets/images/competitions/poster.png',
-    prizeWinner: 'PKR 20,000',
-    prizeRunnerUp: 'PKR 10,000',
+    prizeWinner: 'PKR 30,000',
+    prizeRunnerUp: 'PKR 15,000',
     registrationFee: 'Rs. 1500',
     teamSize: '1-2',
     detailsPdfUrl: '/assets/files/competitions/ui-ux.pdf',
+    category: 'tech',
   },
+  // ── Non-Tech Competitions ──
   {
     id: 'reel-competition',
-    name: 'Best Reel Competition',
-    description: 'Capture the TechnoVerse vibe.',
+    name: 'Reel Competition',
+    description: 'Create engaging tech-related Instagram Reels.',
     longDescription:
-      'Create a short, engaging video reel showcasing the energy and highlights of the TechnoVerse event. Capture key moments, interviews, or creative interpretations. Judged on creativity, editing, and impact.',
+      'Create engaging, tech-related Instagram Reels. Judging will be based on creativity, message, and presentation.',
     image: '/assets/images/competitions/reel.jpg',
-    prizeWinner: 'PKR 8,000',
-    prizeRunnerUp: 'PKR 4,000',
+    prizeWinner: 'PKR 15,000',
+    prizeRunnerUp: 'PKR 7,000',
     registrationFee: 'Rs. 800',
     teamSize: '1',
     detailsPdfUrl: '/assets/files/competitions/reel.pdf',
-  },
-  {
-    id: 'scavenger-hunt',
-    name: 'Scavenger Hunt',
-    description: 'An exciting tech treasure hunt.',
-    longDescription:
-      'Embark on a thrilling scavenger hunt across the campus! Solve cryptic clues, tackle technical challenges, and race against other teams to find the hidden treasure. Requires teamwork, logic, and quick thinking.',
-    image: '/assets/images/competitions/techno-hunt.jpg',
-    prizeWinner: 'PKR 20,000',
-    // prizeRunnerUp: 'Runner-up Basket',
-    registrationFee: 'Rs. 2000',
-    teamSize: '1-5',
-    detailsPdfUrl: '/assets/files/competitions/scavenger-hunt.pdf',
+    category: 'non-tech',
   },
   {
     id: 'tekken',
-    name: 'Tekken Tournament',
-    description: 'Battle it out in the Iron Fist.',
+    name: 'Tekken',
+    description: 'Battle it out with fast combos and fierce fights.',
     longDescription:
-      'The King of Iron Fist Tournament awaits! Compete in intense 1v1 matches in the latest Tekken installment. Prove your mastery of combos, defense, and character knowledge to claim victory.',
+      'Battle it out in Tekken with fast combos and fierce competition. Let the best fighter win!',
     image: '/assets/images/competitions/tekken.jpg',
-    prizeWinner: 'PKR 15,000',
-    prizeRunnerUp: 'PKR 7,000',
+    prizeWinner: 'PKR 20,000',
+    prizeRunnerUp: 'PKR 10,000',
     registrationFee: 'Rs. 1000',
     teamSize: '1',
     detailsPdfUrl: '/assets/files/competitions/tekken.pdf',
+    category: 'non-tech',
+  },
+  {
+    id: 'student-of-the-year',
+    name: 'Student of the Year',
+    description: 'A fun, campus-wide 2-Day challenge.',
+    longDescription:
+      'A fun and challenging campus-wide 2-Day game. Follow clues, solve riddles, and complete tasks to top the leaderboard and win the game.',
+    image: '/assets/images/competitions/techno-hunt.jpg',
+    prizeWinner: 'PKR 30,000',
+    registrationFee: 'Rs. 2000',
+    teamSize: '1-5',
+    detailsPdfUrl: '/assets/files/competitions/student-of-the-year.pdf',
+    category: 'non-tech',
   },
   {
     id: 'fifa',
-    name: 'FIFA Championship',
-    description: 'Score goals and claim glory.',
+    name: 'FIFA Competition',
+    description: 'Virtual football skills in the ultimate face-off.',
     longDescription:
-      'Showcase your virtual football skills in our FIFA tournament. Compete head-to-head, manage your team, and execute flawless plays to become the TechnoVerse FIFA Champion.',
+      'Showcase your virtual football skills in the ultimate FIFA face-off. Fast-paced and thrilling for e-sports lovers.',
     image: '/assets/images/competitions/fifa.jpg',
-    prizeWinner: 'PKR 15,000',
-    prizeRunnerUp: 'PKR 7,000',
+    prizeWinner: 'PKR 20,000',
+    prizeRunnerUp: 'PKR 10,000',
     registrationFee: 'Rs. 1000',
     teamSize: '1',
     detailsPdfUrl: '/assets/files/competitions/fifa.pdf',
+    category: 'non-tech',
+  },
+  {
+    id: 'pubg',
+    name: 'PUBG',
+    description: 'Competitive battleground showdown.',
+    longDescription:
+      'Experience the battleground rush in a competitive PUBG showdown. Test aim, strategy, and survival instincts in intense squad-based combat.',
+    image: '/assets/images/competitions/poster.png',
+    prizeWinner: 'PKR 20,000',
+    prizeRunnerUp: 'PKR 10,000',
+    registrationFee: 'Rs. 1000',
+    teamSize: '4',
+    detailsPdfUrl: '/assets/files/competitions/pubg.pdf',
+    category: 'non-tech',
   },
 ];

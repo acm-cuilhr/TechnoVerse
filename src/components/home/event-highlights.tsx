@@ -18,9 +18,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 // --- Event Stats Data (Replace with realistic estimates for 2025 event) ---
 const eventStats = [
-  { icon: Award, value: 400, suffix: 'K+', label: 'Prize Pool (PKR)' },
-  { icon: Component, value: 11, suffix: '', label: 'Competitions' },
-  { icon: Users, value: 1, suffix: 'K+', label: 'Participants Expected' },
+  { icon: Award, value: 750, suffix: 'K+', label: 'Prize Pool (PKR)' },
+  { icon: Component, value: 13, suffix: '', label: 'Competitions' },
+  { icon: Users, value: 3, suffix: 'K+', label: 'Participants Expected' },
   { icon: Clock4, value: 48, suffix: '+', label: 'Hours of Tech & Fun' },
 ];
 
@@ -28,61 +28,68 @@ const eventStats = [
 const highlights = [
   {
     icon: Code,
-    title: 'Intense Competitions',
+    title: '13 Competitions',
     description:
-      'Push your limits in diverse coding, design, gaming, and strategy challenges with attractive prizes.',
+      '8 tech and 5 non-tech competitions — from coding and ML to gaming and reels — with over 750K in prizes.',
   },
   {
     icon: MicVocal,
-    title: 'Insightful Talks & Workshops',
+    title: 'Workshops & Panel Talks',
     description:
-      'Learn from industry experts, gain new skills, and get inspired by the latest tech trends.',
+      'Industry-led workshops and interactive sessions to sharpen your skills and broaden your perspective.',
   },
   {
     icon: Network,
-    title: 'Networking Hub',
+    title: 'Walk-in Interviews',
     description:
-      'Connect with fellow tech enthusiasts, mentors, potential employers, and future collaborators.',
+      'Submit resumes, interact with HR teams, and explore internship or job openings on the spot.',
   },
   {
     icon: BrainCircuit,
-    title: 'Innovation Showcase',
+    title: 'Innovation & Exhibition',
     description:
-      'Witness creative projects and cutting-edge ideas brought to life by talented participants.',
+      'Showcase projects, explore software house stalls, and connect with startups offering real opportunities.',
   },
 ];
 // --- End Data ---
 
 export default function EventHighlights() {
   return (
-    <section id="event-highlights" className="py-16 md:py-24 px-4 bg-muted/30">
+    <section id="event-highlights" className="py-16 md:py-24 px-4 bg-card/30">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16 section-header">
-          <h2>Experience TechnoVerse 4.0</h2>
+          <h2>Experience TechnoVerse 5.0</h2>
           <p>
-            Dive into Pakistan&rsquo;s premier student tech event – a launchpad
-            for innovation, learning, and connection.
+            Dive into Pakistan&rsquo;s premier student tech event — 13
+            competitions, workshops, walk-in interviews, and two unforgettable
+            days of innovation.
           </p>
         </div>
 
         {/* Stats Bar */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <Card className="bg-card border-border shadow-md">
+        <div className="max-w-5xl mx-auto mb-16 relative">
+          {/* Decorative glow behind stats */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-secondary/20 via-primary/10 to-secondary/20 rounded-2xl blur-xl opacity-60" />
+          <Card className="relative bg-card border-border shadow-md overflow-hidden">
+            {/* Top gradient accent line */}
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent" />
             <CardContent className="p-6 md:p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 {eventStats.map((stat, index) => (
-                  <div key={index} className="flex flex-col items-center">
-                    <stat.icon
-                      className="h-8 w-8 md:h-10 md:w-10 text-secondary mb-2"
-                      strokeWidth={1.5}
-                    />
+                  <div key={index} className="flex flex-col items-center group">
+                    <div className="mb-2 p-2 rounded-full bg-secondary/10 group-hover:bg-secondary/20 transition-colors duration-300">
+                      <stat.icon
+                        className="h-8 w-8 md:h-10 md:w-10 text-secondary"
+                        strokeWidth={1.5}
+                      />
+                    </div>
                     <p className="text-2xl md:text-4xl font-bold text-primary tracking-tighter">
                       <CountUp
                         end={stat.value}
-                        duration={2.75} // Animation duration
-                        enableScrollSpy // Start animation when scrolled into view
-                        scrollSpyDelay={300} // Delay after scrolling into view
+                        duration={2.75}
+                        enableScrollSpy
+                        scrollSpyDelay={300}
                       />
                       {stat.suffix}
                     </p>
@@ -111,10 +118,12 @@ export default function EventHighlights() {
           {highlights.map((item, index) => (
             <Card
               key={index}
-              className="bg-card border-border text-center p-6 shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col"
+              className="bg-card border-border text-center p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col group relative overflow-hidden"
             >
+              {/* Subtle corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-secondary/10 to-transparent rounded-bl-full" />
               <CardHeader className="flex flex-col items-center p-0 mb-4">
-                <div className="mb-3 bg-primary/10 text-primary p-3 rounded-full inline-flex">
+                <div className="mb-3 bg-primary/10 text-primary p-3 rounded-full inline-flex group-hover:bg-primary/15 group-hover:text-primary transition-colors duration-300">
                   <item.icon strokeWidth={1.5} size={32} />
                 </div>
                 <CardTitle className="text-xl font-semibold text-card-foreground">

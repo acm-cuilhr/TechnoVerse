@@ -22,9 +22,9 @@ const raleway = Raleway({
 });
 
 export const metadata = {
-  title: 'Techno Verse',
+  title: 'TechnoVerse 5.0 - Empower, Innovate, Connect',
   description:
-    'Empower, Innovative, Connect - Tech event at COMSATS University Islamabad, Lahore Campus',
+    "TechnoVerse 5.0 - Lahore's Premier University Tech Fest. 13 competitions, 750K+ prize pool, 3000+ participants. 2nd - 3rd May, 2026 at COMSATS University Lahore.",
 };
 
 export default function RootLayout({
@@ -34,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${raleway.variable} font-sans`}>
+      <body
+        className={`${inter.variable} ${raleway.variable} font-sans bg-background text-foreground`}
+      >
         <Header />
         <AnnouncementBanner announcements={announcements} />
         {children}

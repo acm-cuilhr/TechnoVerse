@@ -1,7 +1,5 @@
 'use client';
 
-// Shadcn UI Components
-// Icons
 import {
   Code,
   Group,
@@ -10,6 +8,7 @@ import {
   Instagram,
   Linkedin,
   Link as LinkIcon,
+  Rocket,
   Target,
   Trophy,
   Users as UsersIcon,
@@ -38,24 +37,41 @@ export default function AboutPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 py-16 space-y-24">
-        {' '}
-        {/* Increased spacing */}
-        {/* 2. Overview Section - Text + Image */}
+        {/* Event Overview */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-semibold text-primary flex items-center">
               <Info size={28} className="mr-3 opacity-90" /> Event Overview
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              TechnoVerse 4.0 is the fourth iteration of our flagship annual
-              technology and innovation extravaganza. We bring together
-              students, tech enthusiasts, industry leaders, and innovators for a
-              dynamic exchange of ideas through competitions, workshops, talks,
-              and exhibitions.
+              <strong>TechnoVerse 5.0</strong>, the fifth edition of our tech
+              fest, aims to inspire through competitive challenges and expert
+              insights, with a projected footfall of{' '}
+              <strong>3000+ talented participants</strong> and tech attendees
+              from <strong>all over Pakistan</strong>.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Join us to engage with the brightest minds, witness cutting-edge
-              projects, and connect with the next generation of tech talent.
+              This two-day fest features <strong>13 competitions</strong> (8
+              tech, 5 non-tech) supported by a <strong>750K prize pool</strong>,
+              alongside industry-led <strong>workshops</strong> and{' '}
+              <strong>interactive sessions</strong>. The venue will be split
+              into two main zones:
+            </p>
+            <ul className="list-disc list-inside text-muted-foreground space-y-1 ml-2">
+              <li>
+                Food &amp; commercial stalls to support visitor flow and
+                engagement.
+              </li>
+              <li>
+                Software houses &amp; startups offering showcases, meet-ups, and
+                hiring opportunities.
+              </li>
+            </ul>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              A key addition this year is <strong>walk-in interviews</strong>,
+              allowing participants to submit resumes, interact with HR teams,
+              and explore <strong>internship or job</strong> openings on the
+              spot.
             </p>
           </div>
           <ImagePlaceholder
@@ -65,28 +81,30 @@ export default function AboutPage() {
           />
         </div>
         <Separator className="bg-border/50" />
-        {/* 3. Our Journey Section - Timeline */}
+
+        {/* Building Momentum: The TechnoVerse Legacy */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center mb-12 flex items-center justify-center">
-            <History size={28} className="mr-3 opacity-90" /> Our Journey So Far
+          <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center mb-4 flex items-center justify-center">
+            <History size={28} className="mr-3 opacity-90" /> Building Momentum:
+            The TechnoVerse Legacy
           </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            From a small intra-university event to a national-level tech fest,
+            TechnoVerse has grown with every iteration.
+          </p>
           <div className="relative max-w-3xl mx-auto">
-            {/* The Timeline Line */}
             <div
               className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block"
               aria-hidden="true"
             ></div>
 
-            {/* Timeline Items */}
             <div className="space-y-16">
-              {/* Item 1: TechnoVerse 1.0 */}
+              {/* TechnoVerse 1.0 */}
               <div className="relative group">
                 <div className="md:absolute left-1/2 top-4 -translate-x-1/2 w-8 h-8 bg-secondary rounded-full items-center justify-center ring-4 ring-background hidden md:flex">
                   <Code size={16} className="text-secondary-foreground" />
                 </div>
                 <Card className="md:w-[calc(50%-2rem)] md:ml-auto relative z-10 shadow-lg hover:shadow-primary/10 transition-shadow duration-300">
-                  {' '}
-                  {/* Right side on desktop */}
                   <CardHeader>
                     <CardTitle className="text-2xl text-card-foreground flex items-center">
                       <span className="md:hidden mr-2">
@@ -97,22 +115,17 @@ export default function AboutPage() {
                     <CardDescription>The Genesis</CardDescription>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    Our inaugural event, exclusive to COMSATS Lahore students.
-                    Featured 3 competitions (Coding Spree, Web-e-Thon, Treasure
-                    Hunt) and attracted 250 participants, sparking creativity
-                    and innovation.
+                    Launched successfully within CUI Lahore (150 participants).
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Item 2: TechnoVerse 2.0 */}
+              {/* TechnoVerse 2.0 */}
               <div className="relative group">
                 <div className="md:absolute left-1/2 top-4 -translate-x-1/2 w-8 h-8 bg-secondary rounded-full items-center justify-center ring-4 ring-background hidden md:flex">
                   <Trophy size={16} className="text-secondary-foreground" />
                 </div>
                 <Card className="md:w-[calc(50%-2rem)] md:mr-auto relative z-10 shadow-lg hover:shadow-primary/10 transition-shadow duration-300">
-                  {' '}
-                  {/* Left side on desktop */}
                   <CardHeader>
                     <CardTitle className="text-2xl text-card-foreground flex items-center">
                       <span className="md:hidden mr-2">
@@ -123,22 +136,18 @@ export default function AboutPage() {
                     <CardDescription>Expanding Horizons</CardDescription>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    Opened doors to multiple universities, welcoming 500
-                    participants. Expanded to 7 competitions including design
-                    and eSports (FIFA, Tekken), plus an insightful Panel Talk
-                    with industry experts.
+                    Expanded inter-university reach (200 participants),
+                    introduced panel talks &amp; secured sponsors.
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Item 3: TechnoVerse 3.0 */}
+              {/* TechnoVerse 3.0 */}
               <div className="relative group">
                 <div className="md:absolute left-1/2 top-4 -translate-x-1/2 w-8 h-8 bg-secondary rounded-full items-center justify-center ring-4 ring-background hidden md:flex">
                   <UsersIcon size={16} className="text-secondary-foreground" />
                 </div>
                 <Card className="md:w-[calc(50%-2rem)] md:ml-auto relative z-10 shadow-lg hover:shadow-primary/10 transition-shadow duration-300">
-                  {' '}
-                  {/* Right side on desktop */}
                   <CardHeader>
                     <CardTitle className="text-2xl text-card-foreground flex items-center">
                       <span className="md:hidden mr-2">
@@ -149,38 +158,55 @@ export default function AboutPage() {
                     <CardDescription>Student Week Edition</CardDescription>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    Part of CUI Lahore&rsquo;s Student Week (500+ participants).
-                    Featured Chess, Coding Spree, Scavenger Hunt, Web-e-Thon,
-                    and eSports (Tekken 8, FIFA 25), fostering a vibrant campus
-                    atmosphere.
+                    Engaged 300+ CUI Lahore students during Student Week,
+                    refining our event model.
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Item 4: TechnoVerse 4.0 - Current */}
+              {/* TechnoVerse 4.0 */}
+              <div className="relative group">
+                <div className="md:absolute left-1/2 top-4 -translate-x-1/2 w-8 h-8 bg-secondary rounded-full items-center justify-center ring-4 ring-background hidden md:flex">
+                  <Rocket size={16} className="text-secondary-foreground" />
+                </div>
+                <Card className="md:w-[calc(50%-2rem)] md:mr-auto relative z-10 shadow-lg hover:shadow-primary/10 transition-shadow duration-300">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-card-foreground flex items-center">
+                      <span className="md:hidden mr-2">
+                        <Rocket size={16} className="text-secondary" />
+                      </span>
+                      TechnoVerse 4.0
+                    </CardTitle>
+                    <CardDescription>Scaling Up</CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-muted-foreground">
+                    Expanded inter-university reach (600+ participants),
+                    introduced panel talks, our dinner &amp; secured new
+                    sponsors.
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* TechnoVerse 5.0 - Current */}
               <div className="relative group">
                 <div className="md:absolute left-1/2 top-4 -translate-x-1/2 w-8 h-8 bg-primary rounded-full items-center justify-center ring-4 ring-background hidden md:flex">
                   <Target size={16} className="text-primary-foreground" />
                 </div>
-                <Card className="md:w-[calc(50%-2rem)] md:mr-auto relative z-10 border-primary shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
-                  {' '}
-                  {/* Left side on desktop, Highlighted */}
+                <Card className="md:w-[calc(50%-2rem)] md:ml-auto relative z-10 border-primary shadow-lg hover:shadow-primary/20 transition-shadow duration-300">
                   <CardHeader>
                     <CardTitle className="text-2xl text-primary flex items-center">
-                      {' '}
-                      {/* Highlight title */}
                       <span className="md:hidden mr-2">
                         <Target size={16} className="text-primary" />
                       </span>
-                      TechnoVerse 4.0
+                      TechnoVerse 5.0
                     </CardTitle>
                     <CardDescription>The Future is Now</CardDescription>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    Building on past successes, this edition promises to be
-                    bigger and better, bringing even more opportunities for
-                    learning, competition, and networking. Stay tuned for
-                    details!
+                    3000+ projected participants. 13 competitions, 750K prize
+                    pool, walk-in interviews, workshops, software house stalls,
+                    and two unforgettable days of innovation. 2nd - 3rd May,
+                    2026.
                   </CardContent>
                 </Card>
               </div>
@@ -188,7 +214,133 @@ export default function AboutPage() {
           </div>
         </div>
         <Separator className="bg-border/50" />
-        {/* 4. About ACM CUI LHR Section - Image + Text */}
+
+        {/* Prize Pool Distribution */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center mb-12 flex items-center justify-center">
+            <Trophy size={28} className="mr-3 opacity-90" /> Prize Pool
+            Distribution
+          </h2>
+          <div className="max-w-4xl mx-auto overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-secondary/30">
+                  <th className="text-left py-3 px-4 font-semibold text-card-foreground border-b border-border">
+                    Competition Name
+                  </th>
+                  <th className="text-right py-3 px-4 font-semibold text-card-foreground border-b border-border">
+                    Winner
+                  </th>
+                  <th className="text-right py-3 px-4 font-semibold text-card-foreground border-b border-border">
+                    Runner Up
+                  </th>
+                  <th className="text-right py-3 px-4 font-semibold text-card-foreground border-b border-border">
+                    Total
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  {
+                    name: 'Coding Spree',
+                    winner: 70000,
+                    runner: 30000,
+                    total: 100000,
+                  },
+                  {
+                    name: 'Web-a-Thon',
+                    winner: 70000,
+                    runner: 30000,
+                    total: 100000,
+                  },
+                  {
+                    name: 'App Dev',
+                    winner: 70000,
+                    runner: 30000,
+                    total: 100000,
+                  },
+                  {
+                    name: 'Project Exhibition',
+                    winner: 60000,
+                    runner: 30000,
+                    total: 90000,
+                  },
+                  {
+                    name: 'Query Master',
+                    winner: 40000,
+                    runner: 20000,
+                    total: 60000,
+                  },
+                  {
+                    name: 'Machine Learning',
+                    winner: 40000,
+                    runner: 20000,
+                    total: 60000,
+                  },
+                  {
+                    name: 'Think Tank',
+                    winner: 30000,
+                    runner: 15000,
+                    total: 45000,
+                  },
+                  {
+                    name: 'UI/UX Competition',
+                    winner: 30000,
+                    runner: 15000,
+                    total: 45000,
+                  },
+                  {
+                    name: 'Tekken',
+                    winner: 20000,
+                    runner: 10000,
+                    total: 30000,
+                  },
+                  { name: 'FIFA', winner: 20000, runner: 10000, total: 30000 },
+                  { name: 'PUBG', winner: 20000, runner: 10000, total: 30000 },
+                  {
+                    name: 'Student of the Year',
+                    winner: 30000,
+                    runner: 0,
+                    total: 30000,
+                  },
+                  {
+                    name: 'Reel Competition',
+                    winner: 15000,
+                    runner: 7000,
+                    total: 22000,
+                  },
+                ].map((row, i) => (
+                  <tr
+                    key={i}
+                    className="border-b border-border/50 hover:bg-muted/30 transition-colors"
+                  >
+                    <td className="py-3 px-4 text-foreground font-medium">
+                      {row.name}
+                    </td>
+                    <td className="py-3 px-4 text-right text-muted-foreground">
+                      {row.winner.toLocaleString()}
+                    </td>
+                    <td className="py-3 px-4 text-right text-muted-foreground">
+                      {row.runner > 0 ? row.runner.toLocaleString() : '--'}
+                    </td>
+                    <td className="py-3 px-4 text-right text-foreground font-semibold">
+                      {row.total.toLocaleString()}
+                    </td>
+                  </tr>
+                ))}
+                <tr className="bg-primary/10 font-bold">
+                  <td className="py-3 px-4 text-primary">Total</td>
+                  <td className="py-3 px-4 text-right text-primary">515,000</td>
+                  <td className="py-3 px-4 text-right text-primary">227,000</td>
+                  <td className="py-3 px-4 text-right text-primary">742,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <Separator className="bg-border/50" />
+
+        {/* About ACM CUI LHR */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <ImagePlaceholder
             src="/assets/images/gallery/21.jpg"
@@ -196,8 +348,6 @@ export default function AboutPage() {
             className="aspect-video"
           />
           <div className="space-y-4">
-            {' '}
-            {/* Text on the left */}
             <h2 className="text-3xl md:text-4xl font-semibold text-primary flex items-center">
               <Group size={28} className="mr-3 opacity-90" /> About ACM CUI LHR
             </h2>
@@ -216,7 +366,8 @@ export default function AboutPage() {
           </div>
         </div>
         <Separator className="bg-border/50" />
-        {/* 5. Connect With Us Section */}
+
+        {/* Connect With Us */}
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-semibold text-primary mb-8 flex items-center justify-center">
             <LinkIcon size={28} className="mr-3 opacity-90" /> Connect With Us

@@ -220,37 +220,37 @@ export const categoryStyles: Record<
   { title: string; gridCols: string; logoHeight: string; cardStyle?: boolean }
 > = {
   Exclusive: {
-    title: '💎 Exclusive Sponsor',
-    gridCols: 'grid-cols-1', // Only one column, centered
+    title: 'Exclusive Sponsor',
+    gridCols: 'grid-cols-1',
     logoHeight: 'h-36 md:h-44',
     cardStyle: true,
   },
   CoEvent: {
-    title: '🤝 Co-Event Sponsor', // This title might not be used if combined
-    gridCols: 'grid-cols-1 md:grid-cols-2', // Base style if not combined
+    title: 'Co-Event Sponsor',
+    gridCols: 'grid-cols-1 md:grid-cols-2',
     logoHeight: 'h-32 md:h-40',
     cardStyle: true,
   },
   Premium: {
-    title: '🥇 Premium Sponsors', // This title might not be used if combined
+    title: 'Premium Sponsors',
     gridCols: 'grid-cols-1 md:grid-cols-2',
     logoHeight: 'h-28 md:h-32',
     cardStyle: true,
   },
   Standard: {
-    title: '🥈 Standard Sponsors',
+    title: 'Standard Sponsors',
     gridCols: 'grid-cols-1 md:grid-cols-2',
     logoHeight: 'h-24 md:h-28',
-    cardStyle: true, // Changed to false for better hierarchy (simple box)
+    cardStyle: true,
   },
   Community: {
-    title: '🌐 Community Partners',
+    title: 'Community Partners',
     gridCols: 'grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6',
     logoHeight: 'h-20 md:h-28',
     cardStyle: true,
   },
   Technical: {
-    title: '⚙️ Technical Collaborators',
+    title: 'Technical Collaborators',
     gridCols: 'grid-cols-2',
     logoHeight: 'h-16 md:h-32',
     cardStyle: true,

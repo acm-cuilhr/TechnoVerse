@@ -9,7 +9,7 @@ export default function SponsorsSection() {
   return (
     <section
       id="sponsors"
-      className="py-20 md:py-28 px-4 bg-muted/40 border-t border-b border-border/30" // Added border-b
+      className="py-20 md:py-28 px-4 bg-card/50 border-t border-b border-border/20" // Added border-b
     >
       <div className="container mx-auto">
         <div className="text-center mb-16 md:mb-20">

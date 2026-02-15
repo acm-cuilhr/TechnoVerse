@@ -15,25 +15,35 @@ interface ScheduleItem {
 
 // Schedule data remains the same
 const dayOneSchedule: ScheduleItem[] = [
-  { time: '10:00 AM - 08:00 PM', title: 'Web-e-Thon' },
+  { time: '10:00 AM - 08:00 PM', title: 'Web-a-Thon' },
   { time: '10:00 AM - 08:00 PM', title: 'App Development' },
   { time: '10:00 AM - 08:00 PM', title: 'Machine Learning' },
+  { time: '10:00 AM - 06:00 PM', title: 'Project Exhibition' },
   { time: '11:00 AM - 02:00 PM', title: 'Coding Spree', subtitle: 'Round 1' },
   { time: '12:00 PM - 06:00 PM', title: 'FIFA', subtitle: 'Round 1' },
   { time: '12:00 PM - 06:00 PM', title: 'Tekken', subtitle: 'Round 1' },
-  { time: '12:00 AM - 01:00 PM', title: 'Panel Talk' },
+  { time: '12:00 PM - 06:00 PM', title: 'PUBG', subtitle: 'Qualifiers' },
+  { time: '12:00 PM - 01:00 PM', title: 'Panel Talk / Workshop' },
   { time: '01:00 PM - 04:00 PM', title: 'Think Tank' },
+  { time: 'All Day', title: 'Student of the Year', subtitle: 'Day 1 Tasks' },
+  { time: '08:00 PM - 10:00 PM', title: 'Social Night' },
 ];
 
 const dayTwoSchedule: ScheduleItem[] = [
-  { time: '10:00 AM - 01:00 PM', title: 'Web-e-Thon', subtitle: 'Evaluations' },
+  { time: '10:00 AM - 01:00 PM', title: 'Web-a-Thon', subtitle: 'Evaluations' },
   {
     time: '10:00 AM - 01:00 PM',
     title: 'App Development',
     subtitle: 'Evaluations',
   },
   { time: '10:00 AM - 03:00 PM', title: 'Coding Spree', subtitle: 'Round 2' },
-  { time: '10:00 AM - 04:00 PM', title: 'UI / UX' },
+  { time: '10:00 AM - 04:00 PM', title: 'UI/UX Competition' },
+  { time: '10:00 AM - 02:00 PM', title: 'Query Master' },
+  {
+    time: '10:00 AM - 02:00 PM',
+    title: 'Reel Competition',
+    subtitle: 'Submissions Due',
+  },
   {
     time: '12:00 PM - 03:00 PM',
     title: 'FIFA',
@@ -44,9 +54,13 @@ const dayTwoSchedule: ScheduleItem[] = [
     title: 'Tekken',
     subtitle: 'Semifinals & Finals',
   },
-  { time: '01:00 PM - 03:00 PM', title: 'Query Master' },
-  { time: '04:00 PM - 06:00 PM', title: 'Scavenger Hunt' },
-  { time: '07:00 PM - 10:00 PM', title: 'Closing Ceremony & Dinner' },
+  { time: '12:00 PM - 03:00 PM', title: 'PUBG', subtitle: 'Finals' },
+  {
+    time: 'All Day',
+    title: 'Student of the Year',
+    subtitle: 'Day 2 Tasks & Finals',
+  },
+  { time: '06:00 PM - 10:00 PM', title: 'Dinner & Awards Ceremony' },
 ];
 
 // Reusable component for displaying schedule rows
@@ -108,13 +122,13 @@ export default function Schedule() {
             >
               {' '}
               {/* Style active tab */}
-              Day 1 <span className="hidden sm:inline ml-1"> (May 31st)</span>
+              Day 1 <span className="hidden sm:inline ml-1"> (May 2nd)</span>
             </TabsTrigger>
             <TabsTrigger
               value="day-2"
               className="text-base h-full data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
             >
-              Day 2 <span className="hidden sm:inline ml-1"> (June 1st)</span>
+              Day 2 <span className="hidden sm:inline ml-1"> (May 3rd)</span>
             </TabsTrigger>
           </TabsList>
 

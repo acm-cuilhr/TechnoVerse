@@ -12,7 +12,7 @@ export default function SponsorsPage() {
       <HeroSection
         src="/assets/images/2.jpg"
         title="Sponsors & Partners"
-        // description="We are grateful to our sponsors and partners for their support in making TechnoVerse 4.0 a success!"
+        // description="We are grateful to our sponsors and partners for their support in making TechnoVerse 5.0 a success!"
       />
       <div className="container mx-auto px-4 py-16 md:py-24">
         {/* Use the reusable component */}

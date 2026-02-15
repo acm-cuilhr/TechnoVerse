@@ -16,35 +16,45 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
+    question: 'What is TechnoVerse 5.0?',
+    answer:
+      'TechnoVerse 5.0 is the fifth edition of our tech fest, featuring 13 competitions (8 tech, 5 non-tech) supported by a 750K prize pool, alongside industry-led workshops, interactive sessions, and walk-in interviews. The venue is split into food & commercial stalls plus software house showcases.',
+  },
+  {
     question: 'Is it possible to register for social nights individually?',
     answer:
-      'No, social night access is typically included with full event registration or specific competition passes. Please check the registration details.', // Slightly more helpful answer
+      'No, social night access is typically included with full event registration or specific competition passes. Please check the registration details.',
   },
   {
     question:
-      'Are students from other universities permitted to join TechnoVerse 4.0?',
+      'Are students from other universities permitted to join TechnoVerse 5.0?',
     answer:
-      'Absolutely! TechnoVerse 4.0 welcomes students from all universities to participate in competitions and attend talks/workshops.', // Updated event name
+      'Absolutely! TechnoVerse 5.0 welcomes students from all over Pakistan to participate in competitions and attend talks/workshops.',
   },
   {
-    question: 'Can off-campus students volunteer for TechnoVerse 4.0?',
+    question: 'Can off-campus students volunteer for TechnoVerse 5.0?',
     answer:
-      'Volunteering opportunities are generally reserved for CUI Lahore students to manage coordination effectively. However, all students are encouraged to participate!', // Updated event name
+      'Volunteering opportunities are generally reserved for CUI Lahore students to manage coordination effectively. However, all students are encouraged to participate!',
   },
   {
-    question: 'Can participants sign up for multiple competitions/modules?',
+    question: 'Can participants sign up for multiple competitions?',
     answer:
       'Yes, you can participate in multiple modules. You may need to register and pay the fee separately for each, depending on the specific competition rules.',
   },
   {
     question: 'Do all modules have identical registration fees?',
     answer:
-      'Registration fees may vary between different competitions based on resource requirements. Please refer to the specific details for each module on the Competitions page or guide.', // More informative
+      'Registration fees may vary between different competitions based on resource requirements. Please refer to the specific details for each module on the Competitions page or guide.',
   },
   {
-    question: 'What is included in the social nights?',
+    question: 'What are the closing highlights?',
     answer:
-      'Social nights often feature exciting activities like Qawali Night, concerts, or exclusive dinners, providing great networking and relaxation opportunities. Specifics for TechnoVerse 4.0 will be announced closer to the date.', // Updated event name
+      'Day 1 features a Social Night, and Day 2 concludes with a Dinner and Awards Ceremony.',
+  },
+  {
+    question: 'Are walk-in interviews available for students?',
+    answer:
+      'Yes! A key addition this year is walk-in interviews, allowing participants to submit resumes, interact with HR teams, and explore internship or job openings on the spot.',
   },
 ];
 

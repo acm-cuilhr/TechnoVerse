@@ -34,7 +34,7 @@ function TimeUnit({ value, label, isEnding }: TimeUnitProps) {
           className={cn(
             // Use theme colors: bg-primary/80 or bg-destructive for emphasis near end
             'text-primary-foreground text-3xl sm:text-4xl font-bold px-2 py-2 rounded-lg shadow-md w-full mb-2',
-            isEnding ? 'bg-destructive/80' : 'bg-primary/80' // Example: highlight seconds near end
+            isEnding ? 'bg-destructive/80' : 'bg-card/80' // Dark timer boxes
           )}
         >
           {value.toString().padStart(2, '0')}
@@ -64,10 +64,17 @@ export function CountdownTimer({ targetDate }: { targetDate: Date }) {
     return { days, hours, minutes, seconds };
   };
 
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const [hasMounted, setHasMounted] = useState(false);
   const [hasEnded, setHasEnded] = useState(false);
 
   useEffect(() => {
+    setHasMounted(true);
     setTimeLeft(calculateTimeLeft()); // Calculate immediately on mount
 
     const timer = setInterval(() => {
@@ -91,6 +98,20 @@ export function CountdownTimer({ targetDate }: { targetDate: Date }) {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  // Prevent hydration mismatch — render nothing until client-side mount
+  if (!hasMounted) {
+    return (
+      <Card className="bg-transparent border-0 shadow-lg backdrop-blur-xs">
+        <CardContent className="flex justify-center items-start p-4 sm:p-6">
+          <TimeUnit value={0} label="Days" />
+          <TimeUnit value={0} label="Hours" />
+          <TimeUnit value={0} label="Minutes" />
+          <TimeUnit value={0} label="Seconds" />
+        </CardContent>
+      </Card>
+    );
+  }
+
   if (hasEnded) {
     return (
       // Use Shadcn Card for the ended message
@@ -104,7 +125,7 @@ export function CountdownTimer({ targetDate }: { targetDate: Date }) {
           <p className="text-muted-foreground text-lg">
             Join us from{' '}
             <span className="font-semibold text-secondary">
-              May 31th - June 1st, 2025
+              2nd - 3rd May, 2026
             </span>
             .
           </p>

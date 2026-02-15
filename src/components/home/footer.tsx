@@ -28,7 +28,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-primary text-primary-foreground/90 relative border-t border-border/20">
+    <footer className="bg-card text-primary-foreground/90 relative border-t border-secondary/20">
       <div className="container mx-auto pb-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-8">
           <div>
@@ -73,8 +73,8 @@ export default function Footer() {
               <li className="flex items-start gap-2 text-primary-foreground/70">
                 <MapPin size={16} className="mt-1 shrink-0 text-secondary" />
                 <span>
-                  COMSATS University Islamabad, Lahore Campus, Defence Road, Off
-                  Raiwind Road, Lahore.
+                  COMSATS University Lahore, Defence Road, Off Raiwind Road,
+                  Lahore.
                 </span>
               </li>
               <li className="flex items-center gap-2 text-primary-foreground/70 hover:text-secondary transition-colors">
