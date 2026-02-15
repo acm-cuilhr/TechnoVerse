@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Competition, competitionsData } from '@/data/competitions';
 import { Award, Coins, Download, Trophy, Users } from 'lucide-react';
 
+import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -17,9 +18,17 @@ import { CompetitionCard } from '@/components/competitions/competition-card';
 import FAQ from '@/components/faq';
 import HeroSection from '@/components/hero-section';
 
+type CategoryFilter = 'all' | 'tech' | 'non-tech';
+
 export default function CompetitionsPage() {
   const [selectedCompetition, setSelectedCompetition] =
     useState<Competition | null>(null);
+  const [activeFilter, setActiveFilter] = useState<CategoryFilter>('all');
+
+  const filteredCompetitions = useMemo(() => {
+    if (activeFilter === 'all') return competitionsData;
+    return competitionsData.filter((c) => c.category === activeFilter);
+  }, [activeFilter]);
 
   const handleOpenDialog = (competition: Competition) => {
     setSelectedCompetition(competition);
@@ -29,8 +38,14 @@ export default function CompetitionsPage() {
     setSelectedCompetition(null);
   };
 
+  const filters: { label: string; value: CategoryFilter }[] = [
+    { label: 'All Competitions', value: 'all' },
+    { label: 'Tech', value: 'tech' },
+    { label: 'Non-Tech', value: 'non-tech' },
+  ];
+
   return (
-    <div className="min-h-screen bg-muted/30">
+    <div className="min-h-screen bg-background">
       <HeroSection
         src="/assets/images/2.jpg"
         title="Competitions"
@@ -38,8 +53,39 @@ export default function CompetitionsPage() {
           to view details and prize information."
       />
       <div className="container mx-auto px-4 py-16 md:py-24">
+        {/* Category Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {filters.map((f) => (
+            <button
+              key={f.value}
+              onClick={() => setActiveFilter(f.value)}
+              className={cn(
+                'px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border',
+                activeFilter === f.value
+                  ? 'bg-secondary text-white border-secondary shadow-lg shadow-secondary/25'
+                  : 'bg-transparent text-muted-foreground border-border hover:border-secondary/50 hover:text-foreground'
+              )}
+            >
+              {f.label}
+              <span
+                className={cn(
+                  'ml-2 text-xs px-1.5 py-0.5 rounded-full',
+                  activeFilter === f.value
+                    ? 'bg-white/20'
+                    : 'bg-muted-foreground/10'
+                )}
+              >
+                {f.value === 'all'
+                  ? competitionsData.length
+                  : competitionsData.filter((c) => c.category === f.value)
+                      .length}
+              </span>
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8">
-          {competitionsData.map((competition) => (
+          {filteredCompetitions.map((competition) => (
             <CompetitionCard
               key={competition.id}
               competition={competition}

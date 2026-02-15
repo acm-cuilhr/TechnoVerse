@@ -143,7 +143,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed left-0 top-0 right-0 transition-all duration-300 z-50 flex items-center h-[70px] bg-background/95 backdrop-blur-sm'
+        'fixed left-0 top-0 right-0 transition-all duration-300 z-50 flex items-center h-[70px] bg-background/95 backdrop-blur-sm border-b border-border/30'
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">

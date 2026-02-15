@@ -7,8 +7,28 @@ import Marquee from 'react-fast-marquee';
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import {
+  CrownIcon,
+  DiamondIcon,
+  GearCircuitIcon,
+  GlobeNetworkIcon,
+  HandshakeIcon,
+  MedalIcon,
+} from '@/components/icons/sponsor-icons';
 
 import { SponsorLogo } from './sponsor-logo';
+
+const categoryIcons: Record<
+  SponsorCategory,
+  React.FC<{ className?: string }>
+> = {
+  Exclusive: DiamondIcon,
+  CoEvent: HandshakeIcon,
+  Premium: CrownIcon,
+  Standard: MedalIcon,
+  Community: GlobeNetworkIcon,
+  Technical: GearCircuitIcon,
+};
 
 interface SponsorsDisplayProps {
   sponsorsData: Sponsor[];
@@ -64,7 +84,7 @@ export function SponsorsDisplay({
           const premiumSponsors = groupedSponsors['Premium'] || [];
           if (premiumSponsors.length > 0) {
             sponsorsToRender = [...sponsors, ...premiumSponsors];
-            currentTitle = '🤝 Co-Event & Premium Sponsors';
+            currentTitle = 'Co-Event & Premium Sponsors';
             // Adjust grid based on combined count - e.g., max 3 wide
             currentGridCols = `grid-cols-1 md:grid-cols-${Math.min(sponsorsToRender.length, 3)}`;
             sectionKey = 'CoEvent';
@@ -89,8 +109,14 @@ export function SponsorsDisplay({
             )}
 
             <h3
-              className={`text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 ${titleColor} ${titleClassName}`}
+              className={`text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 flex items-center justify-center gap-3 ${titleColor} ${titleClassName}`}
             >
+              {(() => {
+                const IconComp = categoryIcons[category];
+                return IconComp ? (
+                  <IconComp className="w-8 h-8 md:w-10 md:h-10 inline-block" />
+                ) : null;
+              })()}
               {currentTitle}
             </h3>
 
